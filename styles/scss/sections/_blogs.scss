@@ -1,12 +1,12 @@
 .blogs {
-    margin-left: 300px;
+    margin-left: 325px;
     @include small-screen {
         margin-left: 200px;
     }
 }
 
 .blogs__container {
-    margin-top: 150px;
+    padding-top: 150px;
 }
 
 .blogs__content {

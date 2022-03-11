@@ -57,7 +57,7 @@ h3 {
   justify-content: space-around;
   align-items: center;
   transition: all 0.3s ease-in;
-  z-index: 50;
+  z-index: 91;
   padding: 10px;
 }
 @media (max-width: 930px) {
@@ -122,7 +122,7 @@ h3 {
 }
 
 .blogs {
-  margin-left: 300px;
+  margin-left: 325px;
 }
 @media (max-width: 1024px) {
   .blogs {
@@ -131,7 +131,7 @@ h3 {
 }
 
 .blogs__container {
-  margin-top: 150px;
+  padding-top: 150px;
 }
 
 .blogs__content {
@@ -189,11 +189,12 @@ h3 {
 
 .sidebar {
   width: 325px;
-  height: 3270px;
   background-color: #fde8bd;
   border: 1px solid #aa5b51;
   position: absolute;
-  top: 904px;
+  top: 100%;
+  left: 0;
+  z-index: 0;
 }
 @media (max-width: 1200px) {
   .sidebar {
@@ -290,6 +291,9 @@ h3 {
 
 .sidebar__contact {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100%;
 }
 @media (max-width: 1200px) {
   .sidebar__contact {
@@ -311,11 +315,6 @@ h3 {
 
 .sidebar__logo:hover {
   transform: scale(1.2);
-}
-
-.sidebar__contact {
-  display: flex;
-  flex-direction: column;
 }
 
 .linkedin {
@@ -570,6 +569,7 @@ footer {
   color: whitesmoke;
   padding-top: 50px;
   text-align: center;
+  position: relative;
 }
 
 .footer_copyright-text {
@@ -577,7 +577,7 @@ footer {
 }
 
 .quote {
-  margin-left: 300px;
+  margin-left: 325px;
   text-align: center;
   margin-top: 150px;
   pointer-events: none;
@@ -634,13 +634,23 @@ footer {
 
 .banner__text-box {
   text-align: center;
-  font-size: 170px;
+  font-size: 120px;
   font-weight: 200;
   color: #ffffff;
   text-shadow: black 5px 5px 10px;
   padding: 300px 0 400px 0;
   font-family: "Dancing Script", cursive;
   pointer-events: none;
+  height: 100vh;
+}
+
+.span {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.span.fade {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
