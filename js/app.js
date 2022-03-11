@@ -27,25 +27,59 @@ function myFunction() {
   }
 
 
-const text = document.querySelector(".banner__text");
+
+
+const text = document.querySelector("h1");
+const textP = document.querySelector("p")
 const strText = text.textContent;
+const strTextP = textP.textContent;
 const splitText = strText.split("");
+const splitTextP = strTextP.split("");
 text.textContent = "";
+textP.textContent = "";
 
 for(let i=0; i < splitText.length; i++) {
   text.innerHTML += "<span>"+ splitText[i] + "</span>"
 }
 
+for(let i=0; i < splitTextP.length; i++) {
+  textP.innerHTML += "<span>"+ splitTextP[i] + "</span>"
+}
+
 let char = 0;
-let timer = setInterval(onTick, 50);
+let timer = setInterval(onTick, 200);
 
 function onTick() {
   const span = text.querySelectorAll("span")[char];
   span.classList.add("fade");
   char++
   if(char === splitText.length) {
-    complete();
+    paragraph();
     return;
+  }
+}
+
+function paragraph() {
+  const text = document.querySelector(".banner__paragraph");
+  const strText = text.textContent;
+  const splitText = strText.split("");
+  text.textContent = "";
+
+  for(let i=0; i < splitText.length; i++) {
+    text.innerHTML += "<span>"+ splitText[i] + "</span>"
+  }
+
+  let char = 0;
+  let timer = setInterval(onTick, 100);
+
+  function onTick() {
+    const span = text.querySelectorAll("span")[char];
+    span.classList.add("fade");
+    char++
+    if(char === splitText.length) {
+      complete();
+      return;
+    }
   }
 }
 
