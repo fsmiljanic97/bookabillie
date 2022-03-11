@@ -647,13 +647,11 @@ footer {
   font-size: 80px;
   letter-spacing: 10px;
 }
-
-span {
+.banner__text-box span {
   opacity: 0;
   transition: all 0.4s ease-in-out;
 }
-
-span.fade {
+.banner__text-box span.fade {
   opacity: 1;
 }
 
