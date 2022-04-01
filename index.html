@@ -94,35 +94,78 @@
         </div>
     </section>
     <section class="testimonials">
-            <div class="testimonials__container">
-                    <div class="testimonials__title">
-                        <h3>Guest Book</h3>
-                    </div>
-                        <div class="testimonials__box">
-                            <img class="testimonials__background-img" src="./images/testimonails__image-backgroundshade.png" alt="">
-                            <div class="book">
-                                <div class="cover"><img class="cover__img" src="./images/header__logo.png" alt=""></div>
-                                <div class="page"></div>
-                                <div class="page"></div>
-                                <div class="page"></div>
-                                <div class="page"></div>
-                                <div class="page"></div>
-                                <div class="last-page">
-                                <div class="last__page-flex">
-                                        <img class="last__page-img" src="./images/340-3400381_smiling-man-smiling-man-face-png.png" alt="">
-                                    <div class="last__page-name">
-                                        <span>Michael Bradly, 28</span>
-                                        <p>Journalist</p>
-                                    </div>
-                                </div>
-                                <div class="last__page-text">
-                                    <i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat maxime voluptates voluptatum. Sequi ipsam voluptatibus ea, esse quia repudiandae pariatur illum, iusto voluptatem eaque eveniet, natus quae eum qui sunt! Minus, deleniti! Eos animi quo atque voluptatem, molestiae unde in earum est optio sapiente nihil consequatur ipsam, asperiores et."</i>
-                                </div>
-                            </div>
-                            <div class="back-cover"></div>
+        <div class="testimonials__container">
+            <button id="prev-btn" class="btn">
+                <img class="prev-img image" src="./images/arrow.png" alt="">
+            </button>
+        
+            <div id="book" class="book">
+                <div id="p1" class="paper">
+                    <div class="front">
+                        <div id="f1" class="front-content">
+                            <img  class="cover__logo" src="./images/header__logo.png" alt="">
+                            <h3 class="front__title">Guest Book</h3>
                         </div>
                     </div>
+                    <div class="back">
+                        <div id="b1" class="back-content">
+                            <div class="content-name">
+                                <img src="./images/340-3400381_smiling-man-smiling-man-face-png.png" alt="">
+                                <h4>Thomas Newman</h4>
+                                <span>28, librarian</span>
+                            </div>
+                            <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis repellendus sint, quae, ullam itaque perferendis laborum aliquid tempore voluptatum eum beatae earum porro! Harum quos, quae vel quidem voluptates atque.</q>
+                        </div>
+                    </div>
+                </div>
+                <div id="p2" class="paper">
+                    <div class="front">
+                        <div id="f2" class="front-content">
+                            <div class="content-name">
+                                <img src="./images/340-3400381_smiling-man-smiling-man-face-png.png" alt="">
+                                <h4>Thomas Newman</h4>
+                                <span>28, librarian</span>
+                            </div>
+                            <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis repellendus sint, quae, ullam itaque perferendis laborum aliquid tempore voluptatum eum beatae earum porro! Harum quos, quae vel quidem voluptates atque.</q>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div id="b2" class="back-content">
+                            <div class="content-name">
+                                <img src="./images/340-3400381_smiling-man-smiling-man-face-png.png" alt="">
+                                <h4>Thomas Newman</h4>
+                                <span>28, librarian</span>
+                            </div>
+                            <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis repellendus sint, quae, ullam itaque perferendis laborum aliquid tempore voluptatum eum beatae earum porro! Harum quos, quae vel quidem voluptates atque.</q>
+                        </div>
+                    </div>
+                </div>
+                <div id="p3" class="paper">
+                    <div class="front">
+                        <div id="f3" class="front-content">
+                            <div class="content-name">
+                                <img src="./images/340-3400381_smiling-man-smiling-man-face-png.png" alt="">
+                                <h4>Thomas Newman</h4>
+                                <span>28, librarian</span>
+                            </div>
+                            <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis repellendus sint, quae, ullam itaque perferendis laborum aliquid tempore voluptatum eum beatae earum porro! Harum quos, quae vel quidem voluptates atque.</q>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div id="b3" class="back-content">
+                            <div class="back__cover">
+                                <span id="copyright__year"></span>
+                                <span>Bookabillie</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        
+            <button id="next-btn" class="btn">
+                <img class="image" src="./images/arrow.png" alt="">
+            </button>                  
+        </div>
     </section>
     <section class="contact" id="contact__section" style="background-image: url(./images/alfons-morales-YLSwjSy7stw-unsplash.jpg); position: relative; z-index: -1;">
             <div class="contact__container">
@@ -167,7 +210,9 @@
     </div>
     <footer>
         <div class="wrapper">
-            <span class="footer_copyright-text">©2022 Bookabillie Official. All rights reserved.</span>
+            <span>©</span>
+            <span id="copyright__year"></span>
+            <span>Bookabillie. All rights reserved.</span>
         </div>
     </footer>
     <script src="./js/app.js"></script>
