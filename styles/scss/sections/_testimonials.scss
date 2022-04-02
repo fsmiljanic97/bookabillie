@@ -64,12 +64,13 @@
     left: 0;
     transform-origin: left;
     transition: transform 0.5s;
+    box-shadow: 1px 1px 3px $dark-background;
 }
 
 .front {
     z-index: 1;
     backface-visibility: hidden;
-    border-left: 3px solid $brown-background;
+    border-left: 1px solid $brown-background;
 }
 
 .back {

@@ -93,6 +93,7 @@ function complete() {
 const prevBtn = document.querySelector ('#prev-btn');
 const nextBtn = document.querySelector ('#next-btn');
 const book = document.querySelector ('#book');
+const flipped = "flipped";
 
 const paper1 = document.querySelector ('#p1');
 const paper2 = document.querySelector ('#p2');
@@ -128,15 +129,15 @@ function goNextPage() {
         switch(currentLocation) {
             case 1:
                 openBook();
-                paper1.classList.add("flipped");
+                paper1.classList.add(flipped);
                 paper1.style.zIndex = 1;
                 break;
             case 2:
-                paper2.classList.add("flipped");
+                paper2.classList.add(flipped);
                 paper2.style.zIndex = 2;
                 break;  
             case 3:
-                paper3.classList.add("flipped");
+                paper3.classList.add(flipped);
                 paper3.style.zIndex = 3;
                 closeBook();
                 break;  
@@ -152,16 +153,16 @@ function goPrevPage () {
         switch(currentLocation) {
             case 2:
                 closeBook(true);
-                paper1.classList.remove("flipped");
+                paper1.classList.remove(flipped);
                 paper1.style.zIndex = 3;
                 break;
             case 3:
-                paper2.classList.remove("flipped");
+                paper2.classList.remove(flipped);
                 paper2.style.zIndex = 2;
                 break;
             case 4:
                 openBook();
-                paper3.classList.remove("flipped");
+                paper3.classList.remove(flipped);
                 paper3.style.zIndex = 1;
                 break;
             default :
@@ -171,4 +172,8 @@ function goPrevPage () {
     }
 }
 
-document.getElementById('copyright__year').appendChild(document.createTextNode(new Date().getFullYear()));
+
+const copyright = document.querySelectorAll('.copyright__year');
+copyright.forEach((cr)=>{
+  cr.appendChild(document.createTextNode(new Date().getFullYear()));
+});

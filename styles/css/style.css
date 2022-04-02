@@ -394,12 +394,13 @@ h3 {
   left: 0;
   transform-origin: left;
   transition: transform 0.5s;
+  box-shadow: 1px 1px 3px #252525;
 }
 
 .front {
   z-index: 1;
   backface-visibility: hidden;
-  border-left: 3px solid #aa5b51;
+  border-left: 1px solid #aa5b51;
 }
 
 .back {
@@ -490,6 +491,8 @@ h3 {
 }
 .contact__container::before {
   content: "";
+  display: table;
+  clear: both;
 }
 
 .contact {
@@ -512,7 +515,6 @@ h3 {
   font-size: 36px;
   color: #333333;
   font-family: "Dancing Script", cursive;
-  pointer-events: none;
 }
 
 #yourName, #yourTopic, #yourAge {
@@ -540,7 +542,7 @@ h3 {
   height: 30px;
   margin: 0 auto;
   background-color: transparent;
-  border: 0.5px solid #333333;
+  border: 1px solid #333333;
   border-radius: 5px;
   color: #333333;
   transition: all 0.3s ease-in;

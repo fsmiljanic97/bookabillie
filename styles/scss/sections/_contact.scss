@@ -3,6 +3,8 @@
     justify-content: space-around;
     &::before {
         content: "";
+        display: table;
+        clear: both;
     }
 } 
 
@@ -26,7 +28,7 @@
     font-size: 36px;
     color: $dark-text;
     font-family: $dancing-cursive;
-    pointer-events: none;
+    
 }
 
 #yourName, #yourTopic, #yourAge {
@@ -54,7 +56,7 @@
     height: 30px;
     margin: 0 auto;
     background-color: transparent;
-    border: 0.5px solid $dark-text;
+    border: 1px solid $dark-text;
     border-radius: 5px;
     color: $dark-text;
     transition: $transition;
