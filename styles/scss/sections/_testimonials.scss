@@ -1,13 +1,17 @@
 .testimonials {
-    margin: 150px 0 0 325px;
-    background-image: linear-gradient(to right, brown, $brown-background, brown);
+    padding-left: 325px;
+    margin-bottom: 200px;
+    background-image: linear-gradient(to left, brown, $brown-background);
+    @include tabletMax-screen {
+        padding-left: 0px; 
+     }
 }
 
 .testimonials__container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding: 100px 0;
 }
 
 .prev-img {
@@ -43,6 +47,9 @@
     width: 350px;
     height: 500px;
     transition: transform 0.5s;
+    @include tabletMax-screen {
+        transform: scale(0.9);
+    }
 }
 
 .paper {

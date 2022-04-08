@@ -3,26 +3,26 @@
     background-color: $sidebar-color;
     border: 1px solid $brown-background;
     position: absolute;
-    top: 100%;
+    top: 1012px;
     left: 0;
-    @include medium-screen {
-        height: 4009px;
-    }
-    @include small-screen {
-        width: 200px;
+    @include tabletMax-screen {
+        display: none;
     }
 }
 
 .sidebar__about {
     height: 1000px;
     margin: 30px 0 100px 0;
+    padding-top: 50px;
+    @include blogs-breakpoint {
+        height: 900px;
+    }
 }
 
 .about__image-box {
     max-width: 150px;
     max-height: 150px;
     margin: 0 auto;
-    padding: 30px 0;
 }
 
 .about__img {
@@ -77,7 +77,7 @@
 
 .sidebar__instagram {
     height: 1000px;
-    margin-bottom: 400px;
+    margin-bottom: 500px;
 }
 
 .instagram__logo {
@@ -91,18 +91,11 @@
     width: 100%;
 }
 
-.instagram-media {
-    transform: scale(0.9);
-}
-
 .sidebar__contact {
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding-bottom: 70%;
-    @include medium-screen {
-        margin: 1100px auto 0;
-    }
+    padding-bottom: 200px;
 }
 
 .sidebar__contact-title {
@@ -115,20 +108,9 @@
 .sidebar__logo {
     margin: 30px 0;
     transition: $transition;
+    width: 60px;
 }
 
 .sidebar__logo:hover {
     transform: scale(1.2);
-}
-
-.linkedin {
-    width: 120px;
-}
-
-.facebook {
-    width: 170px;
-}
-
-.instagram {
-    width: 60px;
 }

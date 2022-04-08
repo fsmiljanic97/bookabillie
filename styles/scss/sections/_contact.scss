@@ -1,16 +1,14 @@
 .contact__container {
     display: flex;
     justify-content: space-around;
-    &::before {
-        content: "";
-        display: table;
-        clear: both;
-    }
 } 
 
 .contact {
     padding-bottom: 200px;
-    margin-top: 150px;
+    margin-left: 325px;
+    @include tabletMax-screen {
+        margin-left: 0;
+    }
 }
 
 .contact__form {

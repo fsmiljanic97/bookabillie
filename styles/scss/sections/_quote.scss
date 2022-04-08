@@ -1,11 +1,10 @@
 .quote {
-    margin-left: 325px;
+    padding-left: 325px;
+    margin-bottom: 200px;
     text-align: center;
-    margin-top: 150px;
-    pointer-events: none;
-    @include small-screen {
-        margin-left: 200px;
-    }
+    @include tabletMax-screen {
+        padding-left: 0px; 
+     }
 }
 
 .quote__box {

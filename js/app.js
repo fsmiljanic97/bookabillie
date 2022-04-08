@@ -9,11 +9,12 @@ window.addEventListener("load", function(){
     preload.classList.add("preload-finish");
 });
     
-
+//show more/less
 function myFunction() {
     var dots = document.getElementById("dots");
     var moreText = document.getElementById("more");
     var btnText = document.getElementById("aboutBtn");
+    
   
     if (dots.style.display === "none") {
       dots.style.display = "inline";
@@ -24,10 +25,27 @@ function myFunction() {
       btnText.innerHTML = "Show less";
       moreText.style.display = "inline";
     }
-  }
+  };
+
+  function myFunctionTablet() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more-tablet");
+    var btnText = document.getElementById("aboutBtn-tablet");
+    
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Show more";
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Show less";
+      moreText.style.display = "inline";
+    }
+  };
 
 
-
+//fade text banner
 
 const text = document.querySelector("h1");
 const textP = document.querySelector("p")

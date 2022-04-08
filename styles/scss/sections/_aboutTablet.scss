@@ -1,0 +1,74 @@
+.tablet__about {
+    display: none;
+    @include tabletMax-screen {
+        display: block;
+        margin-bottom: 200px;
+    }
+}
+
+.tablet__about-box {
+    height: 1000px;
+    margin: 30px 0 100px 0;
+    @include tabletMax-screen {
+        height: auto;
+        margin: 0;
+        padding: 50px 50px 150px 50px;
+        background-image: linear-gradient($sidebar-color, beige, $sidebar-color);
+    }
+}
+
+.tablet__about-imageBox {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 0 auto;
+}
+
+.tablet__about-img {
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.tablet__about-name {
+    padding: 50px 0 10px 0;
+    text-align: center;
+    font-size: 24px;
+    pointer-events: none;
+}
+
+.tablet__about-founder {
+    display: block;
+    text-align: center;
+    font-weight: 200;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.tablet__about-text {
+    padding: 0 10px;
+}
+
+.about__text-bio {
+    padding: 20px 0;
+    text-align: start;
+    line-height: 25px;
+    pointer-events: none;
+}
+
+#more-tablet {
+    display: none;
+}
+
+#aboutBtn-tablet {
+    display: block;
+    font-size: 14px;
+    margin: 20px auto 0;
+    background-color: transparent;
+    border: none;
+    color: $brown-background;
+    cursor: pointer;
+}
+
+#aboutBtn-tablet:hover {
+    text-decoration: underline;
+}
