@@ -1,14 +1,11 @@
 .tablet__insta {
     margin-bottom: 200px;
+    padding: 50px 0;
     display: none;
     @include tabletMax-screen {
         display: block;
         background-image: linear-gradient($sidebar-color, beige, $sidebar-color);
     }
-}
-
-.tablet__insta-box {
-    padding: 50px 0;
 }
 
 .tablet__insta-imageBox {
@@ -27,7 +24,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    @include tabletMin-screen {
+        flex-direction: column;
+        transform: scale(0.8);
+    }
 }
+
 
 .instagram-media {
     transform: scale(0.7);

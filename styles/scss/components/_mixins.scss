@@ -10,6 +10,10 @@
     @media (max-width: 768px) {@content; }
 }
 
+@mixin book-breakpoint {
+    @media (max-width: 580px) {@content; }
+}
+
 @mixin small-screen {
     @media (max-width: 320px) {@content; }
 }

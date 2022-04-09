@@ -9,6 +9,7 @@
     align-items: center;
     z-index: 999;
     transition: opacity 0.5s ease;
+    scro
     img {
         width: 200px;
     }
@@ -17,5 +18,4 @@
 .preload-finish {
     opacity: 0;
     pointer-events: none;
-
 }

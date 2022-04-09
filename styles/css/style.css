@@ -39,7 +39,7 @@ h3 {
   z-index: 999;
   transition: opacity 0.5s ease;
 }
-.preload img {
+.preload scro img {
   width: 200px;
 }
 
@@ -63,7 +63,6 @@ h3 {
 @media (max-width: 1024px) {
   .header__content {
     justify-content: space-between;
-    padding: 10px 20px;
   }
 }
 
@@ -79,6 +78,16 @@ h3 {
   .header__content.sticky {
     padding: 10px 20px;
   }
+}
+
+@media (max-width: 580px) {
+  .header__logo-link {
+    width: 150px;
+  }
+}
+
+.header__logo {
+  width: 100%;
 }
 
 .header__list {
@@ -138,8 +147,13 @@ h3 {
   .tablet__about-box {
     height: auto;
     margin: 0;
-    padding: 50px 50px 150px 50px;
+    padding: 50px;
     background-image: linear-gradient(#fde8bd, beige, #fde8bd);
+  }
+}
+@media (max-width: 580px) {
+  .tablet__about-box {
+    padding: 30px;
   }
 }
 
@@ -225,6 +239,19 @@ h3 {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   grid-auto-flow: column;
+}
+@media (max-width: 768px) {
+  .blogs__grid-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 580px) {
+  .blogs__grid-box {
+    transform: scale(0.8);
+  }
 }
 
 .blog__box {
@@ -390,7 +417,7 @@ h3 {
 .testimonials {
   padding-left: 325px;
   margin-bottom: 200px;
-  background-image: linear-gradient(to left, brown, #aa5b51);
+  background-image: linear-gradient(#aa5b51, #252525);
 }
 @media (max-width: 1024px) {
   .testimonials {
@@ -403,6 +430,22 @@ h3 {
   justify-content: center;
   align-items: center;
   padding: 100px 0;
+}
+@media (max-width: 1240px) {
+  .testimonials__container {
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 768px) {
+  .testimonials__container {
+    transform: scale(0.7);
+  }
+}
+@media (max-width: 580px) {
+  .testimonials__container {
+    transform: scale(0.5);
+    padding: 0;
+  }
 }
 
 .prev-img {
@@ -438,11 +481,6 @@ h3 {
   width: 350px;
   height: 500px;
   transition: transform 0.5s;
-}
-@media (max-width: 1024px) {
-  .book {
-    transform: scale(0.9);
-  }
 }
 
 .paper {
@@ -488,9 +526,14 @@ h3 {
   padding: 20px;
 }
 
-#f1 {
+.front-content {
   padding-top: 50px;
   background-color: #fde8bd;
+}
+@media (max-width: 580px) {
+  .front-content img {
+    width: 80%;
+  }
 }
 
 .cover__logo {
@@ -555,6 +598,38 @@ h3 {
   background-color: #fde8bd;
 }
 
+.tablet__follow {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+  background-image: linear-gradient(#fde8bd, white, #fde8bd);
+  padding: 50px 0;
+  display: none;
+}
+@media (max-width: 1024px) {
+  .tablet__follow {
+    display: block;
+  }
+}
+
+.tablet__follow-title {
+  font-size: 36px;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 30px;
+  pointer-events: none;
+}
+
+.tablet__follow-linkSingle {
+  transition: all 0.3s ease-in;
+  padding: 0 15px;
+}
+
+.tablet__follow-linkSingle:hover {
+  transform: scale(1.2);
+}
+
 .contact__container {
   display: flex;
   justify-content: space-around;
@@ -579,6 +654,11 @@ h3 {
   box-shadow: 2px 2px 10px black;
   padding: 20px 0;
   margin-top: 200px;
+}
+@media (max-width: 768px) {
+  .contact__form {
+    transform: scale(0.8);
+  }
 }
 
 .form__title {
@@ -655,6 +735,11 @@ footer {
   padding: 40px 60px;
   border: 1px solid darkorange;
 }
+@media (max-width: 768px) {
+  .quote__box {
+    padding: 20px 30px;
+  }
+}
 
 .quote__outbox {
   background-color: #252525;
@@ -694,6 +779,7 @@ footer {
 
 .tablet__insta {
   margin-bottom: 200px;
+  padding: 50px 0;
   display: none;
 }
 @media (max-width: 1024px) {
@@ -701,10 +787,6 @@ footer {
     display: block;
     background-image: linear-gradient(#fde8bd, beige, #fde8bd);
   }
-}
-
-.tablet__insta-box {
-  padding: 50px 0;
 }
 
 .tablet__insta-imageBox {
@@ -723,6 +805,12 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+@media (max-width: 768px) {
+  .tablet__insta-feed {
+    flex-direction: column;
+    transform: scale(0.8);
+  }
 }
 
 .instagram-media {
@@ -743,9 +831,19 @@ footer {
   font-family: "Dancing Script", cursive;
   pointer-events: none;
 }
+@media (max-width: 1024px) {
+  .banner__text-box {
+    font-size: 60px;
+  }
+}
 .banner__text-box p {
   font-size: 80px;
   letter-spacing: 10px;
+}
+@media (max-width: 768px) {
+  .banner__text-box p {
+    font-size: 40px;
+  }
 }
 .banner__text-box span {
   opacity: 0;

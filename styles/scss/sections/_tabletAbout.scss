@@ -12,8 +12,11 @@
     @include tabletMax-screen {
         height: auto;
         margin: 0;
-        padding: 50px 50px 150px 50px;
+        padding: 50px;
         background-image: linear-gradient($sidebar-color, beige, $sidebar-color);
+    }
+    @include book-breakpoint {
+        padding: 30px
     }
 }
 

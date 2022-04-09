@@ -1,0 +1,29 @@
+.tablet__follow {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+    background-image: linear-gradient($sidebar-color, white, $sidebar-color);
+    padding: 50px 0;
+    display: none;
+    @include tabletMax-screen {
+        display: block;
+    }
+}
+
+.tablet__follow-title {
+    font-size: 36px;
+    font-family: $dancing-cursive;
+    margin-bottom: 30px;
+    pointer-events: none;
+}
+
+.tablet__follow-linkSingle {
+    transition: $transition;
+    padding: 0 15px;
+}
+
+.tablet__follow-linkSingle:hover {
+    transform: scale(1.2);
+}

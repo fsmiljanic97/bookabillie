@@ -22,6 +22,15 @@
    grid-template-columns: 1fr 1fr;
    grid-template-rows: auto auto;
    grid-auto-flow: column;
+   @include tabletMin-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    @include book-breakpoint {
+        transform: scale(0.8);
+    }
 }
 
 .blog__box {
