@@ -2,7 +2,8 @@
     padding-left: 325px;
     margin-bottom: 200px;
     @include tabletMax-screen {
-       padding-left: 0px; 
+       padding-left: 0px;
+       margin-bottom: 100px; 
     }
 }
 
@@ -18,18 +19,17 @@
 }
 
 .blogs__grid-box {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: auto auto;
-   grid-auto-flow: column;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   width: 70%;
    @include tabletMin-screen {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    @include book-breakpoint {
-        transform: scale(0.8);
+        width: auto;
     }
 }
 
@@ -39,21 +39,23 @@
     position: relative;
     margin: 30px;
     box-shadow: black 5px 5px 10px;
-    transition: $transition;
-    @include blogs-breakpoint {
-       width: 290px;
-       height: 190px;
+    overflow: hidden;
+    &:hover {
+        img {
+            width: 110%;
+            height: 110%;
+        }
     }
-}
-
-.blog__box:hover {
-    transform: scale(1.1)
+    @include book-breakpoint {
+        width: 250px;
+        height: 150px;
+    }
 }
 
 .blog__box-img {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    transition: $transition;
 }
 
 .blog__box-title {
@@ -63,7 +65,7 @@
     position: absolute;
     color: $white-text;
     cursor: pointer;
-    @include blogs-breakpoint {
+    @include book-breakpoint {
      font-size: 18px;  
     }
 }

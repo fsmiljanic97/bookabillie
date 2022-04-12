@@ -5,6 +5,8 @@
     @include tabletMax-screen {
         display: block;
         background-image: linear-gradient($sidebar-color, beige, $sidebar-color);
+        padding-bottom: 150px;
+        margin-bottom: 0;
     }
 }
 
@@ -26,11 +28,5 @@
     flex-direction: row;
     @include tabletMin-screen {
         flex-direction: column;
-        transform: scale(0.8);
     }
-}
-
-
-.instagram-media {
-    transform: scale(0.7);
 }

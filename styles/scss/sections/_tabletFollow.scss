@@ -9,6 +9,8 @@
     display: none;
     @include tabletMax-screen {
         display: block;
+        margin-bottom: 0;
+        padding-bottom: 100px;
     }
 }
 

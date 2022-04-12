@@ -36,7 +36,7 @@
             </div>
         </div>    
     </header>
-    <section class="banner" style="background-image: url(./images/banner__background.jpg); z-index: 1;">
+    <section class="banner" style="background-image: url(./images/banner__background.jpg);">
         <div class="banner__text-box">
             <h1 class="banner__text">Welcome</h1>
             <p class="banner__paragraph">Please, enjoy your stay.</p>
@@ -59,36 +59,34 @@
         </div>
     </section>
     <section class="blogs">
-        <div class="blogs__container">
-            <div class="blogs__content">
-                <div class="blogs__title">
-                    <h3>Latest Articles</h3>
+        <div class="blogs__content">
+            <div class="blogs__title">
+                <h3>Latest Articles</h3>
+            </div>
+            <div class="blogs__grid-box">
+                <div class="blog__box">
+                    <div class="blog__box-title">
+                        <h2>How to choose a book?</h2>
+                    </div>
+                    <a class="blog__link" href=""><img src="./images/Books_New-e1611252343470.jpg" class="blog__box-img" alt=""></a>
                 </div>
-                <div class="blogs__grid-box">
-                    <div class="blog__box">
-                        <div class="blog__box-title">
-                            <h2>How to choose a book?</h2>
-                        </div>
-                        <a class="blog__link" href=""><img src="./images/Books_New-e1611252343470.jpg" class="blog__box-img" alt=""></a>
+                <div class="blog__box">
+                    <div class="blog__box-title">
+                        <h2>Best place to read at?</h2>
                     </div>
-                    <div class="blog__box">
-                        <div class="blog__box-title">
-                            <h2>Best place to read at?</h2>
-                        </div>
-                        <a class="blog__link" href=""><img src="./images/reading-book-732x549-thumbnail-732x549.jpg" class="blog__box-img" alt=""></a>
+                    <a class="blog__link" href=""><img src="./images/reading-book-732x549-thumbnail-732x549.jpg" class="blog__box-img" alt=""></a>
+                </div>
+                <div class="blog__box">
+                    <div class="blog__box-title">
+                        <h2>Book review guide.</h2>
                     </div>
-                    <div class="blog__box">
-                        <div class="blog__box-title">
-                            <h2>Book review guide.</h2>
-                        </div>
-                        <a class="blog__link" href=""><img src="./images/book-pages-reading-mood-wallpaper-preview.jpg" class="blog__box-img" alt=""></a>
+                    <a class="blog__link" href=""><img src="./images/book-pages-reading-mood-wallpaper-preview.jpg" class="blog__box-img" alt=""></a>
+                </div>
+                <div class="blog__box">
+                    <div class="blog__box-title">
+                        <h2>Importance of history books</h2>
                     </div>
-                    <div class="blog__box">
-                        <div class="blog__box-title">
-                            <h2>Importance of history books</h2>
-                        </div>
-                        <a class="blog__link" href=""><img src="./images/ancient-book-1.jpg" class="blog__box-img" alt=""></a>
-                    </div>
+                    <a class="blog__link" href=""><img src="./images/ancient-book-1.jpg" class="blog__box-img" alt=""></a>
                 </div>
             </div>
         </div>
@@ -104,34 +102,15 @@
             </div>
         </div>
     </section>
-    <section class="quote">
-        <div class="quote__container">
-            <div class="quote__title">
-                <h3>Quote of the day</h3>
-            </div>
-            <div class="quote__outbox">
-                <div class="quote__box">
-                    <div class="quote__image-box">
-                        <img class="quote__img" src="./images/quotation-mark-svgrepo-com.svg" alt="">
-                    </div>
-                    <div class="quote__text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, perferendis.</p>
-                    </div>
-                    <span class="quote__name">Richard Griffin, 1878.</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="testimonials">
+    <section class="testimonials" style="background-image: url(./images/testimonials__background.jpg); background-size: cover;">
         <div class="testimonials__container">
-            <button id="prev-btn" class="btn">
-                <img class="prev-img image" src="./images/arrow.png" alt="">
-            </button>
             <div id="book" class="book">
                 <div id="p1" class="paper">
                     <div class="front">
                         <div id="f1" class="front-content">
-                            <img  class="cover__logo" src="./images/header__logo.png" alt="">
+                            <div class="cover__logo-box">
+                                <img  class="cover__logo" src="./images/header__logo.png" alt="">
+                            </div>
                             <h3 class="front__title">Guest Book</h3>
                         </div>
                     </div>
@@ -142,7 +121,7 @@
                                 <h4>Thomas Newman</h4>
                                 <span>28, librarian</span>
                             </div>
-                            <q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis repellendus sint, quae, ullam itaque perferendis laborum aliquid tempore voluptatum eum beatae earum porro! Harum quos, quae vel quidem voluptates atque.</q>
+                            <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae consequatur itaque deserunt harum id fugiat sunt sint, distinctio ad reiciendis magnam natus ipsam non rerum accusantium quod cupiditate sed. Sint nulla esse magni quam eos. Quibusdam rem quidem sapiente optio.</q>
                         </div>
                     </div>
                 </div>
@@ -189,9 +168,32 @@
                     </div>
                 </div>
             </div>
-            <button id="next-btn" class="btn">
-                <img class="image" src="./images/arrow.png" alt="">
-            </button>                  
+            <div class="button__box">
+                <button id="prev-btn" class="btn">
+                    <img class="prev-img image" src="./images/arrow.png" alt="">
+                </button>
+                <button id="next-btn" class="btn">
+                    <img class="image" src="./images/arrow.png" alt="">
+                </button>
+            </div>                  
+        </div>
+    </section>
+    <section class="quote">
+        <div class="quote__container">
+            <div class="quote__title">
+                <h3>Quote of the day</h3>
+            </div>
+            <div class="quote__outbox">
+                <div class="quote__box">
+                    <div class="quote__image-box">
+                        <img class="quote__img" src="./images/quotation-mark-svgrepo-com.svg" alt="">
+                    </div>
+                    <div class="quote__text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, perferendis.</p>
+                    </div>
+                    <span class="quote__name">Richard Griffin, 1878.</span>
+                </div>
+            </div>
         </div>
     </section>
     <section class="tablet__follow">

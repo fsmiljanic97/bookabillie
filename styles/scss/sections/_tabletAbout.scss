@@ -2,7 +2,9 @@
     display: none;
     @include tabletMax-screen {
         display: block;
-        margin-bottom: 200px;
+        margin-bottom: 100px;
+        padding-top: 50px;
+        background-image: linear-gradient($sidebar-color, beige, $sidebar-color);
     }
 }
 
@@ -13,7 +15,6 @@
         height: auto;
         margin: 0;
         padding: 50px;
-        background-image: linear-gradient($sidebar-color, beige, $sidebar-color);
     }
     @include book-breakpoint {
         padding: 30px

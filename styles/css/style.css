@@ -135,7 +135,9 @@ h3 {
 @media (max-width: 1024px) {
   .tablet__about {
     display: block;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
+    padding-top: 50px;
+    background-image: linear-gradient(#fde8bd, beige, #fde8bd);
   }
 }
 
@@ -148,7 +150,6 @@ h3 {
     height: auto;
     margin: 0;
     padding: 50px;
-    background-image: linear-gradient(#fde8bd, beige, #fde8bd);
   }
 }
 @media (max-width: 580px) {
@@ -220,6 +221,7 @@ h3 {
 @media (max-width: 1024px) {
   .blogs {
     padding-left: 0px;
+    margin-bottom: 100px;
   }
 }
 
@@ -235,10 +237,11 @@ h3 {
 }
 
 .blogs__grid-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-auto-flow: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
 }
 @media (max-width: 768px) {
   .blogs__grid-box {
@@ -246,11 +249,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-}
-@media (max-width: 580px) {
-  .blogs__grid-box {
-    transform: scale(0.8);
+    width: auto;
   }
 }
 
@@ -260,23 +259,23 @@ h3 {
   position: relative;
   margin: 30px;
   box-shadow: black 5px 5px 10px;
-  transition: all 0.3s ease-in;
+  overflow: hidden;
 }
-@media (max-width: 1240px) {
+.blog__box:hover img {
+  width: 110%;
+  height: 110%;
+}
+@media (max-width: 580px) {
   .blog__box {
-    width: 290px;
-    height: 190px;
+    width: 250px;
+    height: 150px;
   }
-}
-
-.blog__box:hover {
-  transform: scale(1.1);
 }
 
 .blog__box-img {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  transition: all 0.3s ease-in;
 }
 
 .blog__box-title {
@@ -287,7 +286,7 @@ h3 {
   color: #ffffff;
   cursor: pointer;
 }
-@media (max-width: 1240px) {
+@media (max-width: 580px) {
   .blog__box-title {
     font-size: 18px;
   }
@@ -300,6 +299,12 @@ h3 {
   position: absolute;
   top: 1012px;
   left: 0;
+  padding: 200px 0;
+}
+@media (max-width: 1240px) {
+  .sidebar {
+    top: 922px;
+  }
 }
 @media (max-width: 1024px) {
   .sidebar {
@@ -308,13 +313,11 @@ h3 {
 }
 
 .sidebar__about {
-  height: 1000px;
-  margin: 30px 0 100px 0;
-  padding-top: 50px;
+  padding-bottom: 400px;
 }
 @media (max-width: 1240px) {
   .sidebar__about {
-    height: 900px;
+    margin-bottom: 510px;
   }
 }
 
@@ -375,8 +378,11 @@ h3 {
 }
 
 .sidebar__instagram {
-  height: 1000px;
-  margin-bottom: 500px;
+  padding-bottom: 300px;
+}
+
+.instagram-media {
+  transform: scale(0.9);
 }
 
 .instagram__logo {
@@ -394,7 +400,6 @@ h3 {
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding-bottom: 200px;
 }
 
 .sidebar__contact-title {
@@ -415,13 +420,19 @@ h3 {
 }
 
 .testimonials {
-  padding-left: 325px;
+  margin-left: 325px;
   margin-bottom: 200px;
   background-image: linear-gradient(#aa5b51, #252525);
 }
 @media (max-width: 1024px) {
   .testimonials {
-    padding-left: 0px;
+    margin-left: 0px;
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 580px) {
+  .testimonials {
+    overflow-x: scroll;
   }
 }
 
@@ -429,23 +440,8 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 100px 0;
-}
-@media (max-width: 1240px) {
-  .testimonials__container {
-    transform: scale(0.9);
-  }
-}
-@media (max-width: 768px) {
-  .testimonials__container {
-    transform: scale(0.7);
-  }
-}
-@media (max-width: 580px) {
-  .testimonials__container {
-    transform: scale(0.5);
-    padding: 0;
-  }
 }
 
 .prev-img {
@@ -453,11 +449,13 @@ h3 {
 }
 
 .btn {
-  width: 50px;
+  width: 60px;
   height: 50px;
-  border: none;
+  padding: 5px 10px;
   cursor: pointer;
-  background-color: transparent;
+  background-color: #fde8bd;
+  opacity: 0.8;
+  border-radius: 10px;
   margin: 10px;
   transition: transform 0.5s;
 }
@@ -466,10 +464,11 @@ h3 {
   outline: none;
 }
 
-.btn:hover img {
+.btn:hover {
   background-color: crimson;
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  opacity: 1;
 }
 
 .image {
@@ -481,6 +480,12 @@ h3 {
   width: 350px;
   height: 500px;
   transition: transform 0.5s;
+}
+@media (max-width: 768px) {
+  .book {
+    max-width: 250px;
+    height: 400px;
+  }
 }
 
 .paper {
@@ -525,21 +530,26 @@ h3 {
   align-items: center;
   padding: 20px;
 }
-
-.front-content {
-  padding-top: 50px;
-  background-color: #fde8bd;
-}
-@media (max-width: 580px) {
-  .front-content img {
-    width: 80%;
+@media (max-width: 768px) {
+  .front-content q,
+.back-content q {
+    font-size: 14px;
   }
 }
 
-.cover__logo {
+#f1 {
+  background-color: #fde8bd;
+  padding-top: 60px;
+}
+
+.cover__logo-box {
   border: 1px solid #252525;
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+.cover__logo {
+  width: 100%;
 }
 
 .back-content {
@@ -569,6 +579,11 @@ h3 {
   text-align: center;
   pointer-events: none;
 }
+@media (max-width: 768px) {
+  .front__title {
+    font-size: 32px;
+  }
+}
 
 .content-name {
   text-align: center;
@@ -593,6 +608,11 @@ h3 {
   width: 100%;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .back__cover {
+    padding-top: 340px;
+  }
+}
 
 #b3 {
   background-color: #fde8bd;
@@ -611,6 +631,8 @@ h3 {
 @media (max-width: 1024px) {
   .tablet__follow {
     display: block;
+    margin-bottom: 0;
+    padding-bottom: 100px;
   }
 }
 
@@ -725,6 +747,7 @@ footer {
 @media (max-width: 1024px) {
   .quote {
     padding-left: 0px;
+    margin-bottom: 100px;
   }
 }
 
@@ -786,6 +809,8 @@ footer {
   .tablet__insta {
     display: block;
     background-image: linear-gradient(#fde8bd, beige, #fde8bd);
+    padding-bottom: 150px;
+    margin-bottom: 0;
   }
 }
 
@@ -809,16 +834,16 @@ footer {
 @media (max-width: 768px) {
   .tablet__insta-feed {
     flex-direction: column;
-    transform: scale(0.8);
   }
-}
-
-.instagram-media {
-  transform: scale(0.7);
 }
 
 .banner {
   margin-bottom: 200px;
+}
+@media (max-width: 1024px) {
+  .banner {
+    margin-bottom: 0;
+  }
 }
 
 .banner__text-box {
@@ -829,16 +854,26 @@ footer {
   text-shadow: black 5px 5px 10px;
   padding: 300px 0 400px 0;
   font-family: "Dancing Script", cursive;
-  pointer-events: none;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1240px) {
   .banner__text-box {
-    font-size: 60px;
+    font-size: 90px;
+  }
+}
+@media (max-width: 768px) {
+  .banner__text-box {
+    font-size: 50px;
   }
 }
 .banner__text-box p {
   font-size: 80px;
   letter-spacing: 10px;
+  padding: 0 10px;
+}
+@media (max-width: 1240px) {
+  .banner__text-box p {
+    font-size: 50px;
+  }
 }
 @media (max-width: 768px) {
   .banner__text-box p {

@@ -1,27 +1,22 @@
 .testimonials {
-    padding-left: 325px;
+    margin-left: 325px;
     margin-bottom: 200px;
     background-image: linear-gradient($brown-background, $dark-background);
     @include tabletMax-screen {
-        padding-left: 0px; 
-     }
+        margin-left: 0px; 
+        margin-bottom: 100px;
+    }
+    @include book-breakpoint {
+        overflow-x: scroll;
+    }
 }
 
 .testimonials__container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 100px 0;
-    @include blogs-breakpoint {
-        transform: scale(0.9);
-    }
-    @include tabletMin-screen {
-        transform: scale(0.7);
-    }
-    @include book-breakpoint {
-        transform: scale(0.5);
-        padding: 0;
-    }
 }
 
 .prev-img {
@@ -29,11 +24,13 @@
 }
 
 .btn {
-    width: 50px;
+    width: 60px;
     height: 50px;
-    border: none;
+    padding: 5px 10px;
     cursor: pointer;
-    background-color: transparent;
+    background-color: $sidebar-color;
+    opacity: 0.8;
+    border-radius: 10px;
     margin: 10px;
     transition: transform 0.5s;
 }
@@ -42,10 +39,11 @@
     outline: none;
 }
 
-.btn:hover img {
+.btn:hover {
     background-color: crimson;
-    border-radius: 5px;
-    padding: 5px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    opacity: 1;
 }
 
 .image {
@@ -57,6 +55,10 @@
     width: 350px;
     height: 500px;
     transition: transform 0.5s;
+    @include tabletMin-screen{
+        max-width: 250px;
+        height: 400px;
+    }
 }
 
 .paper {
@@ -100,22 +102,26 @@
     justify-content: flex-start;
     align-items: center;
     padding: 20px;
-}
- 
-.front-content {
-    padding-top: 50px;
-    background-color: $sidebar-color;
-    img {
-        @include book-breakpoint {
-            width: 80%;
+    q {
+        @include tabletMin-screen {
+            font-size: 14px;
         }
     }
 }
 
-.cover__logo {
+#f1 {
+    background-color: $sidebar-color;
+    padding-top: 60px;
+}
+
+.cover__logo-box {
     border:1px solid $dark-background;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+.cover__logo {
+    width: 100%;
 }
 
 .back-content {
@@ -144,6 +150,9 @@
     font-weight: 300;
     text-align: center;
     pointer-events: none;
+    @include tabletMin-screen {
+        font-size: 32px;
+    }
 }
 
 .content-name {
@@ -170,6 +179,9 @@
     display: block;
     width: 100%;
     text-align: center;
+    @include tabletMin-screen {
+        padding-top: 340px;
+    }
 }
 
 #b3 {

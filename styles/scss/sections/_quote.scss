@@ -3,7 +3,8 @@
     margin-bottom: 200px;
     text-align: center;
     @include tabletMax-screen {
-        padding-left: 0px; 
+        padding-left: 0px;
+        margin-bottom: 100px; 
      }
 }
 

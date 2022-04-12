@@ -5,17 +5,19 @@
     position: absolute;
     top: 1012px;
     left: 0;
+    padding: 200px 0;
+    @include blogs-breakpoint {
+        top: 922px;
+    }
     @include tabletMax-screen {
         display: none;
     }
 }
 
 .sidebar__about {
-    height: 1000px;
-    margin: 30px 0 100px 0;
-    padding-top: 50px;
+    padding-bottom: 400px;
     @include blogs-breakpoint {
-        height: 900px;
+        margin-bottom: 510px;
     }
 }
 
@@ -76,8 +78,11 @@
 }
 
 .sidebar__instagram {
-    height: 1000px;
-    margin-bottom: 500px;
+  padding-bottom: 300px;
+}
+
+.instagram-media {
+    transform: scale(0.9);
 }
 
 .instagram__logo {
@@ -95,7 +100,6 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding-bottom: 200px;
 }
 
 .sidebar__contact-title {
