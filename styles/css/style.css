@@ -39,12 +39,12 @@ h3 {
   z-index: 999;
   transition: opacity 0.5s ease;
 }
-.preload scro img {
+.preload img {
   width: 200px;
 }
 
 .preload-finish {
-  opacity: 0;
+  display: none;
   pointer-events: none;
 }
 
@@ -241,7 +241,7 @@ h3 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  max-width: 90%;
 }
 @media (max-width: 768px) {
   .blogs__grid-box {
@@ -249,17 +249,16 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: auto;
   }
 }
 
 .blog__box {
-  width: 350px;
-  height: 250px;
-  position: relative;
+  width: 450px;
+  height: 300px;
   margin: 30px;
-  box-shadow: black 5px 5px 10px;
+  position: relative;
   overflow: hidden;
+  box-shadow: black 5px 5px 10px;
 }
 .blog__box:hover img {
   width: 110%;
@@ -268,7 +267,8 @@ h3 {
 @media (max-width: 580px) {
   .blog__box {
     width: 250px;
-    height: 150px;
+    height: 200px;
+    margin: 20px 0;
   }
 }
 
@@ -301,7 +301,7 @@ h3 {
   left: 0;
   padding: 200px 0;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1460px) {
   .sidebar {
     top: 922px;
   }
@@ -313,11 +313,11 @@ h3 {
 }
 
 .sidebar__about {
-  padding-bottom: 400px;
+  height: 1100px;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1460px) {
   .sidebar__about {
-    margin-bottom: 510px;
+    height: 1780px;
   }
 }
 
@@ -378,7 +378,7 @@ h3 {
 }
 
 .sidebar__instagram {
-  padding-bottom: 300px;
+  padding-bottom: 400px;
 }
 
 .instagram-media {
@@ -636,6 +636,11 @@ h3 {
   }
 }
 
+.tablet__follow-linkBox {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 .tablet__follow-title {
   font-size: 36px;
   font-family: "Dancing Script", cursive;
@@ -855,7 +860,7 @@ footer {
   padding: 300px 0 400px 0;
   font-family: "Dancing Script", cursive;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1460px) {
   .banner__text-box {
     font-size: 90px;
   }
@@ -870,7 +875,7 @@ footer {
   letter-spacing: 10px;
   padding: 0 10px;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1460px) {
   .banner__text-box p {
     font-size: 50px;
   }

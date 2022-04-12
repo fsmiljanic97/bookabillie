@@ -6,7 +6,68 @@ window.addEventListener("scroll", function(){
 
 window.addEventListener("load", function(){
     const preload = document.querySelector(".preload");
-    preload.classList.add("preload-finish");
+    if (document.readyState === 'complete') {
+      preload.classList.add("preload-finish");
+      const text = document.querySelector("h1");
+      const textP = document.querySelector("p");
+      const strText = text.textContent;
+      const strTextP = textP.textContent;
+      const splitText = strText.split("");
+      const splitTextP = strTextP.split("");
+      text.textContent = "";
+      textP.textContent = "";
+
+
+      for(let i=0; i < splitText.length; i++) {
+        text.innerHTML += "<span>"+ splitText[i] + "</span>"
+      }
+
+      for(let i=0; i < splitTextP.length; i++) {
+        textP.innerHTML += "<span>"+ splitTextP[i] + "</span>"
+      }
+
+      let char = 0;
+      let charP = 0;
+      let timer = setInterval(onTick, 200);
+      let timerP = 0;
+      
+
+      function onTick() {
+        const span = text.querySelectorAll("span")[char];
+        span.classList.add("fade");
+        char++;
+        if(char === splitText.length) {
+          complete();
+          if(timer == null) {
+            timerP = setInterval(onTickP, 100);
+          }
+          return;
+        }
+      }
+
+      function onTickP() {
+        if (timerP != null) {
+          const spanP = textP.querySelectorAll("span")[charP];
+          spanP.classList.add("fade");
+          charP++;
+          if(charP === splitTextP.length) {
+          completeP();
+          return;
+          }   
+        }
+      }
+        
+      function complete() {
+        clearInterval(timer);
+        timer = null;
+      }
+
+      function completeP() {
+        clearInterval(timerP);
+        timerP = null;
+      }
+      return;
+    }
 });
     
 //show more/less
@@ -47,64 +108,10 @@ function myFunction() {
 
 //fade text banner
 
-const text = document.querySelector("h1");
-const textP = document.querySelector("p")
-const strText = text.textContent;
-const strTextP = textP.textContent;
-const splitText = strText.split("");
-const splitTextP = strTextP.split("");
-text.textContent = "";
-textP.textContent = "";
 
-for(let i=0; i < splitText.length; i++) {
-  text.innerHTML += "<span>"+ splitText[i] + "</span>"
-}
 
-for(let i=0; i < splitTextP.length; i++) {
-  textP.innerHTML += "<span>"+ splitTextP[i] + "</span>"
-}
 
-let char = 0;
-let timer = setInterval(onTick, 200);
 
-function onTick() {
-  const span = text.querySelectorAll("span")[char];
-  span.classList.add("fade");
-  char++
-  if(char === splitText.length) {
-    paragraph();
-    return;
-  }
-}
-
-function paragraph() {
-  const text = document.querySelector(".banner__paragraph");
-  const strText = text.textContent;
-  const splitText = strText.split("");
-  text.textContent = "";
-
-  for(let i=0; i < splitText.length; i++) {
-    text.innerHTML += "<span>"+ splitText[i] + "</span>"
-  }
-
-  let char = 0;
-  let timer = setInterval(onTick, 100);
-
-  function onTick() {
-    const span = text.querySelectorAll("span")[char];
-    span.classList.add("fade");
-    char++
-    if(char === splitText.length) {
-      complete();
-      return;
-    }
-  }
-}
-
-function complete() {
-  clearInterval(timer);
-  timer = null;
-}
 
 //book animation
 

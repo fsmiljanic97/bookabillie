@@ -15,9 +15,9 @@
 }
 
 .sidebar__about {
-    padding-bottom: 400px;
+    height: 1100px;
     @include blogs-breakpoint {
-        margin-bottom: 510px;
+        height: 1780px;
     }
 }
 
@@ -78,7 +78,7 @@
 }
 
 .sidebar__instagram {
-  padding-bottom: 300px;
+  padding-bottom: 400px;
 }
 
 .instagram-media {

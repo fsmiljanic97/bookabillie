@@ -1,5 +1,5 @@
 @mixin blogs-breakpoint {
-    @media (max-width: 1240px) {@content; }
+    @media (max-width: 1460px) {@content; }
 }
 
 @mixin tabletMax-screen {

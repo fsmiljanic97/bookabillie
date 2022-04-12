@@ -23,23 +23,22 @@
    flex-wrap: wrap;
    justify-content: center;
    align-items: center;
-   width: 70%;
+   max-width: 90%;
    @include tabletMin-screen {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: auto;
     }
 }
 
 .blog__box {
-    width: 350px;
-    height: 250px;
-    position: relative;
+    width: 450px;
+    height: 300px;
     margin: 30px;
-    box-shadow: black 5px 5px 10px;
+    position: relative;
     overflow: hidden;
+    box-shadow: black 5px 5px 10px;
     &:hover {
         img {
             width: 110%;
@@ -48,7 +47,8 @@
     }
     @include book-breakpoint {
         width: 250px;
-        height: 150px;
+        height: 200px;
+        margin: 20px 0;
     }
 }
 
